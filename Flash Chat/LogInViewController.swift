@@ -30,7 +30,7 @@ class LogInViewController: UIViewController {
         SVProgressHUD.show()
         
         
-        // auto fill up UN,PW
+        // auto fill up UN,PW for testing
         emailTextfield.text = "a@a.com"
         passwordTextfield.text = "123456"
         
