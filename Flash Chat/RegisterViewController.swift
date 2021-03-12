@@ -7,6 +7,7 @@
 
 import UIKit
 import Firebase
+import SVProgressHUD
 
 class RegisterViewController: UIViewController {
 
@@ -28,6 +29,8 @@ class RegisterViewController: UIViewController {
 
   
     @IBAction func registerPressed(_ sender: AnyObject) {
+        
+        SVProgressHUD.show()
 
         
         // TODO: Set up a new user on our Firbase database
@@ -38,6 +41,8 @@ class RegisterViewController: UIViewController {
             } else {
                 // success
                 print("Registration Succesful!")
+                
+                SVProgressHUD.dismiss()
 
                 self.performSegue(withIdentifier: "goToChat", sender: self)
 

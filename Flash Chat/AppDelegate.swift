@@ -20,9 +20,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //TODO: Initialise and Configure your Firebase here:
         
         FirebaseApp.configure()
-         
-        let myDatabase = Database.database().reference()
-        myDatabase.setValue("We've got data!")
+        
+        // this code is saving a data in the entire database that cause wiping the old messages,
+//        let myDatabase = Database.database().reference()
+//        myDatabase.setValue("We've got data!")
         
         
         return true
