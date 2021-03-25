@@ -18,10 +18,6 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
     var messageArray : [Message] = [Message]()
     
     
-    
-    
-
-    
     // We've pre-linked the IBOutlets
     @IBOutlet var heightConstraint: NSLayoutConstraint!
     @IBOutlet var sendButton: UIButton!
@@ -63,10 +59,11 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
             object: nil
         )
         
-        configureTableView()
         retrieveMessages()
         
         messageTableView.separatorStyle = .none
+        
+        configureTableView()
         
         
     }
@@ -101,13 +98,13 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         if cell.senderUsername.text == Auth.auth().currentUser?.email as String? {
             cell.avatarImageView.backgroundColor = UIColor.flatMint()
-            cell.messageBackground.backgroundColor = UIColor.flatSkyBlue()
+            cell.messageBackground.backgroundColor = UIColor.flatGray()
             
             
         } else {
             
             cell.avatarImageView.backgroundColor = UIColor.flatWatermelon()
-            cell.messageBackground.backgroundColor = UIColor.flatGray()
+            cell.messageBackground.backgroundColor = UIColor.flatSkyBlue()
         }
         
         

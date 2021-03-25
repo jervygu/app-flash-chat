@@ -31,8 +31,8 @@ class LogInViewController: UIViewController {
         
         
         // auto fill up UN,PW for testing
-        emailTextfield.text = "a@a.com"
-        passwordTextfield.text = "123456"
+//        emailTextfield.text = "a@a.com"
+//        passwordTextfield.text = "123456"
         
         //TODO: Log in the user
         Auth.auth().signIn(withEmail: emailTextfield.text!, password: passwordTextfield.text!) { (user, error) in
