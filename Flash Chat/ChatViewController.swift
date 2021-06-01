@@ -50,7 +50,7 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
 
         //TODO: Register your MessageCell.xib file here:
         messageTableView.register(UINib(nibName: "MessageCell", bundle: nil), forCellReuseIdentifier: "customMessageCell")
-        
+        messageTableView.register(UINib(nibName: "DefaultMessageCell", bundle: nil), forCellReuseIdentifier: "defaultMessageCell")
         
         NotificationCenter.default.addObserver(
             self,
@@ -86,29 +86,30 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "customMessageCell", for: indexPath) as! CustomMessageCell
-        
-//        let messageArray = ["First message", "Second message ", "Third message"]
-//        cell.messageBody.text = messageArray[indexPath.row]
-        
-        cell.messageBody.text = messageArray[indexPath.row].messageBody
-        cell.senderUsername.text = messageArray[indexPath.row].sender
-        
-        cell.avatarImageView.image = UIImage(named: "egg")
-        
-        if cell.senderUsername.text == Auth.auth().currentUser?.email as String? {
+        if messageArray[indexPath.row].sender == Auth.auth().currentUser?.email as String? {
+            
+            let cell = tableView.dequeueReusableCell(withIdentifier: "defaultMessageCell", for: indexPath) as! DefaultMessageCell
+            
+            cell.messageBody.text = messageArray[indexPath.row].messageBody
+            cell.senderUsername.text = messageArray[indexPath.row].sender
+            
+            cell.avatarImageView.image = UIImage(named: "egg")
             cell.avatarImageView.backgroundColor = UIColor.flatMint()
             cell.messageBackground.backgroundColor = UIColor.flatGray()
             
-            
+            return cell
         } else {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "customMessageCell", for: indexPath) as! CustomMessageCell
             
+            cell.messageBody.text = messageArray[indexPath.row].messageBody
+            cell.senderUsername.text = messageArray[indexPath.row].sender
+            
+            cell.avatarImageView.image = UIImage(named: "egg")
             cell.avatarImageView.backgroundColor = UIColor.flatWatermelon()
             cell.messageBackground.backgroundColor = UIColor.flatSkyBlue()
+            
+            return cell
         }
-        
-        
-        return cell
     }
     
     

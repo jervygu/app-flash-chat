@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04915A202665C3B50097BECE /* DefaultMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04915A1E2665C3B50097BECE /* DefaultMessageCell.swift */; };
+		04915A212665C3B50097BECE /* DefaultMessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04915A1F2665C3B50097BECE /* DefaultMessageCell.xib */; };
 		11BE7BE425FA350D0084374F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 11BE7BE325FA350D0084374F /* GoogleService-Info.plist */; };
 		6321A9C31B94EBA10053D2E7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6321A9C21B94EBA10053D2E7 /* Images.xcassets */; };
 		6321A9E21B94EBE70053D2E7 /* CustomMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6321A9DB1B94EBE70053D2E7 /* CustomMessageCell.swift */; };
@@ -23,6 +25,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		04915A1E2665C3B50097BECE /* DefaultMessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultMessageCell.swift; sourceTree = "<group>"; };
+		04915A1F2665C3B50097BECE /* DefaultMessageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DefaultMessageCell.xib; sourceTree = "<group>"; };
 		11BE7BE325FA350D0084374F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		510DD2D1AEE919BE140548A4 /* Pods-Flash Chat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Flash Chat.debug.xcconfig"; path = "Target Support Files/Pods-Flash Chat/Pods-Flash Chat.debug.xcconfig"; sourceTree = "<group>"; };
 		6321A9B61B94EBA10053D2E7 /* Flash Chat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Flash Chat.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -98,6 +102,8 @@
 			children = (
 				6321A9DB1B94EBE70053D2E7 /* CustomMessageCell.swift */,
 				6321A9DE1B94EBE70053D2E7 /* MessageCell.xib */,
+				04915A1E2665C3B50097BECE /* DefaultMessageCell.swift */,
+				04915A1F2665C3B50097BECE /* DefaultMessageCell.xib */,
 			);
 			name = "Custom Cell";
 			sourceTree = "<group>";
@@ -216,6 +222,7 @@
 				63E28B291B9A336600FBF6E0 /* Main.storyboard in Resources */,
 				6321A9C31B94EBA10053D2E7 /* Images.xcassets in Resources */,
 				11BE7BE425FA350D0084374F /* GoogleService-Info.plist in Resources */,
+				04915A212665C3B50097BECE /* DefaultMessageCell.xib in Resources */,
 				63EBB3051D98004B004175E5 /* LaunchScreen.storyboard in Resources */,
 				6321A9E51B94EBE70053D2E7 /* MessageCell.xib in Resources */,
 			);
@@ -288,6 +295,7 @@
 				6321A9E21B94EBE70053D2E7 /* CustomMessageCell.swift in Sources */,
 				63E28B321B9A337600FBF6E0 /* RegisterViewController.swift in Sources */,
 				63E28B311B9A337600FBF6E0 /* LogInViewController.swift in Sources */,
+				04915A202665C3B50097BECE /* DefaultMessageCell.swift in Sources */,
 				63E28B2F1B9A337600FBF6E0 /* AppDelegate.swift in Sources */,
 				63E28B301B9A337600FBF6E0 /* ChatViewController.swift in Sources */,
 			);
